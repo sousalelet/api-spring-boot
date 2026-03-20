@@ -18,7 +18,7 @@ public class LivroController {
     @Transactional
     @PostMapping
     //metodo post cadastrar + 2
-    public void cadastrarCategoria(@RequestBody @Valid DadosCadastroLivros dados){
+    public void cadastrarLivro(@RequestBody @Valid DadosCadastroLivros dados){
         livroRepository.save(new Livro(dados));
     }
 
