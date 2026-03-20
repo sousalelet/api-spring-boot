@@ -2,6 +2,7 @@ package br.com.fiap.cp1.api.livro;
 
 import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
 
 //+3
@@ -17,5 +18,6 @@ public record DadosCadastroLivros(
         @NotBlank
         String autor,
 
+        @Positive
         Long anopublicacao) {
 }
