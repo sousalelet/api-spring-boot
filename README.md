@@ -16,7 +16,7 @@ Projeto desenvolvido em Java com Spring Boot para cadastro e listagem de livros.
 ## Como executar
 
 1. Clonar o repositório:
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/sousalelet/api-spring-boot
 
 2. Abrir o projeto em uma IDE (IntelliJ ou VS Code)
 
