@@ -1,5 +1,6 @@
 package br.com.fiap.cp1.api.controller;
 
+import java.util.List;
 import br.com.fiap.cp1.api.livro.DadosCadastroLivros;
 import br.com.fiap.cp1.api.livro.LivroRepository;
 import br.com.fiap.cp1.api.livro.Livro;
@@ -19,6 +20,11 @@ public class LivroController {
     @Transactional
     public Livro cadastrarLivro(@RequestBody @Valid DadosCadastroLivros dados){
         return livroRepository.save(new Livro(dados));
+    }
+
+    @GetMapping
+    public List<Livro> listar(){
+        return livroRepository.findAll();
     }
 
 }
