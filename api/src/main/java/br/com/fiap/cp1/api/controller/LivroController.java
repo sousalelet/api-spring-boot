@@ -15,11 +15,10 @@ public class LivroController {
     @Autowired
     private LivroRepository livroRepository;
 
-    @Transactional
     @PostMapping
-    //metodo post cadastrar + 2
-    public void cadastrarLivro(@RequestBody @Valid DadosCadastroLivros dados){
-        livroRepository.save(new Livro(dados));
+    @Transactional
+    public Livro cadastrarLivro(@RequestBody @Valid DadosCadastroLivros dados){
+        return livroRepository.save(new Livro(dados));
     }
 
 }
